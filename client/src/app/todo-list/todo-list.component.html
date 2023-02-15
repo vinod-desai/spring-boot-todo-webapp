@@ -1,0 +1,17 @@
+<h2>Todo List</h2>
+<table class="table">
+    <thead>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Created On</th>
+        <th>Modified On</th>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let todo of todos$ | async">
+            <td>{{ todo.description }}</td>
+            <td>{{ todo.status }}</td>
+            <td>{{ todo.createdOnDateTime | date:'medium' }}</td>
+            <td>{{ todo.modifiedOnDateTime | date:'medium' }}</td>
+        </tr>
+    </tbody>
+</table>
